@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
+    <link rel="shortcut icon" href="img/iconpokebola.png" type="image/x-icon">       
+    <script src="pokeapi.js"></script>
+</head>
+<header class="encabezado">
+    <nav class="navegacion">
+        <span>
+            <a href="#">Inicio</a>
+        </span>
+        <span>
+            No sirvo
+        </span>
+
+        <span>
+            Me da ansiedad
+        </span>
+        
+        <span>
+            <a href="http://facebook.com" target="_blank">Facebook</a>
+        </span>
+        
+        <span>
+            <a href="http://youtube.com" target="_blank">Youtube</a>
+        </span>
+    </nav>
+</header>
+<body>
+
+    <!--Buscador Tipo Acordeón Para Cada Colección-->
+    <section class="buscador_coleccion">
+        <article class="titulobuscador">
+            <h1>Buscador por colección</h1>
+        </article>
+        <article class="contendor_colecciones">
+            <div class="seleccion_coleccion" id="SelectColection">
+                <img src="img/fuego/fuego.png" alt="Fuego">
+                <p id="ColectionType">
+                    Fuego
+                </p>
+            </div>
+            <div class="seleccion_coleccion" id="SelectColection">
+                <img src="img/hierba/hierba.jpg" alt="Hierba">
+                <p id="ColectionType">
+                    Hierba
+                </p>
+            </div>
+            <div class="seleccion_coleccion" id="SelectColection">
+                <img src="img/agua/agua.jpg" alt="Agua">
+                <p id="ColectionType">
+                    Agua
+                </p>
+            </div>
+            <div class="seleccion_coleccion" id="SelectColection">
+                <img src="img/normal/normal.webp" alt="Normal">
+                <p id="ColectionType">
+                    Normal
+                </p>
+            </div>
+            <div class="seleccion_coleccion" id="SelectColection">
+                <img src="img/psiquico/psiquico.jpg" alt="Psíquico">
+                <p id="ColectionType">
+                    Psíquico
+                </p>
+            </div>
+            <div class="seleccion_coleccion" id="SelectColection">
+                <img src="img/electrico/electrico.jpg" alt="Eléctrico">
+                <p id="ColectionType">
+                    Eléctrico
+                </p>
+            </div>
+        </article>
+    <!--Seleccionador Tipo Cuadritos y Rectángulo-->
+        <article class="cuadrito_seleccionador">
+            <div class="cuadrito" id="SquareSelect"></div>
+            <div class="cuadrito" id="SquareSelect"></div>
+            <div class="cuadrito" id="SquareSelect"></div>
+            <div class="cuadrito" id="SquareSelect"></div>
+            <div class="cuadrito" id="SquareSelect"></div>
+            <div class="cuadrito" id="SquareSelect"></div>
+        </article>
+    </section>
+
+    <!--Banner Principal dónde se van a mostrar todos los productos de cada colección, se va a poder filtrar por órden alfabético 
+    y por calificación-->
+    <section class="coleccion_categoria">
+        <article class="filtro_coleccion">
+            Filtro colecciones
+        </article>
+        <article class="categoria_productos" id="CategoryProducts">
+            <div class="producto">
+                <img id="ProductImg" src="img/psiquico/mewtwo.png" alt="ImgPokemon">
+                <span id="ProductName">MewTwo</span>
+                <span id="ProductRanking">* * * * *</span>
+                <span id="ColectionType">Psíquico</span>
+            </div>
+        </article>
+    </section>
+
+    <!--Banner con dos columnas, a la izquierda aparece la imagen completa del producto, a la deracha aparecen
+    Descripciones, Nombre, Calificación, etc.
+    -->
+   <section class="pokedex">
+    <article class="pokedex_izquierda">
+        <div class="top_izq">
+            <div class="circulo_grande"></div>
+            <div class="circulo_pequeño_rojo"></div>
+            <div class="circulo_pequeño_amarillo"></div>
+            <div class="circulo_pequeño_verde"></div>
+        </div>
+        <div class="centro_pokedex">
+            <div class="top_centro_pokedex">
+            <div class="luz_roja"></div>
+            <div class="luz_negra"></div>
+            </div>
+            <div class="imagen_pokedex" id="imagenPokemon">
+
+            </div>
+            <div class="bottom_centro_pokedex">
+            <div class="luz_grande"></div>
+            <div class="lineas">
+                <div class="linea_gris"></div>
+                <div class="linea_gris"></div>
+                <div class="linea_gris"></div>
+            </div>
+            </div>
+        </div>
+        <div class="footer_izq">
+            <div class="nombre_pokedex" id="nombrePokemon">
+                
+            </div>
+            <div class="botones_pokedex">
+                <img alt="botones" src="img/pokedex/botones.jpg">
+            </div>
+        </div>
+        <div class="tipo_pokemon" id="TipoPokemon">
+            Tipo
+        </div>
+    </article>
+    <article class="pokedex_derecha">
+       <div class="top_der">
+        <div class="descripcion_pokedex" id="descripcionPokedex">
+Datos del pokemon
+        </div>
+       </div>
+       <div class="numeros_pokedex">
+        <button id="botonBuscar1">
+1
+       </button>
+       <button id="botonBuscar2">
+2
+       </button>
+       <button id="botonBuscar3">
+3
+       </button>
+       <button id="botonBuscar4">
+4
+       </button>
+       <button id="botonBuscar5">
+5
+       </button>
+       <button id="botonBuscar6">
+6
+       </button>
+       <button id="botonBuscar7">
+7
+       </button>
+       <button id="botonBuscar8">
+8
+       </button>
+       <button id="botonBuscar9">
+9
+       </button>
+       <button id="botonBuscar0">
+0
+       </button>
+    </div>
+    <div class="footer_der">
+        <div class="boton_buscar">
+            <input id="escribirPokemon" placeholder="Escriba el pokémon">
+            <button onclick="find_character()">
+                Buscar
+            </button>
+        </div>
+    </div>
+    </article>
+
+   </section>
+
+
+    <script src="java.js"></script>
+</body>
+</html>
